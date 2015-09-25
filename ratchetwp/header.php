@@ -3,21 +3,23 @@
  * Default Page Header
  *
  * @package WordPress
- * @subpackage Bootpresswp
- * @since Bootpresswp 0.1
+ * @subpackage Ratchetwp
+ * @since Ratchetwp 0.1
  *
  * Last Revised: May 14, 2015
  */
 global $childDir;
 $childDir = dirname(get_bloginfo('stylesheet_url'));
 ?><!DOCTYPE html>
-<!-- Bootpresswp -->
-<!-- http://www.anomalous.co.za/bootpresswp -->
+<!-- Ratchetwp -->
+<!-- http://www.anomalous.co.za/Ratchetwp -->
 <html <?php language_attributes(); ?>>
 <head>
     <meta charset="<?php bloginfo('charset'); ?>"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title><?php wp_title('|', true, 'right'); ?></title>
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>"/>
     <link rel="shortcut icon" href="<?php print $childDir; ?>/assets/ico/favicon.ico">
@@ -37,29 +39,6 @@ $childDir = dirname(get_bloginfo('stylesheet_url'));
     <p>Why do I have to update my browser?<br> Old browsers (especially Internet Explorer versions 6, 7, and 8) are less stable, and much more vulnerable to viruses, spyware, malware, and other security issues. So security alone is a very good reason to upgrade.<br><br> But there is more: We rely on new Web design technologies. These new languages serve as a foundation for many websites today, and for virtually all new websites and Web apps. But unfortunately, many of these new websites will neither look nor function in the same way in old browsers like IE8.</p>
     <p>Thanks</p>
     <![endif]-->
-    <div class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a>
-            </div>
-            <?php
-                wp_nav_menu( array(
-                    'menu'              => 'main-menu',
-                    'theme_location'    => 'main-menu',
-                    'depth'             => 2,
-                    'container'         => 'div',
-                    'container_class'   => 'collapse navbar-collapse',
-                    'container_id'      => 'bs-example-navbar-collapse-1',
-                    'menu_class'        => 'nav navbar-nav',
-                    'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-                    'walker'            => new wp_bootstrap_navwalker())
-                );
-            ?>               
-        </div>
-    </div>
+    <header class="bar bar-nav">
+      <h1 class="title">Ratchet</h1>
+    </header>

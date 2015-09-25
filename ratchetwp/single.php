@@ -3,8 +3,8 @@
  * Default Post Template
  *
  * @package WordPress
- * @subpackage Bootpresswp
- * @since Bootpresswp 0.1
+ * @subpackage Ratchetwp
+ * @since Ratchetwp 0.1
  *
  * Last Revised: Sep 07, 2015
  */
@@ -13,13 +13,13 @@ get_header(); ?>
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
-                    <?php if(function_exists('bootpresswp_breadcrumbs')) bootpresswp_breadcrumbs(); ?>
+                    <?php if(function_exists('Ratchetwp_breadcrumbs')) Ratchetwp_breadcrumbs(); ?>
                     <h1><?php the_title();?></h1>
-                    <p class="meta"><?php echo bootpresswp_posted_on();?></p>
+                    <p class="meta"><?php echo Ratchetwp_posted_on();?></p>
                     <?php the_content();?>
                     <?php the_tags( '<p>Tags: ', ', ', '</p>'); ?>
                     <?php wp_link_pages( array(
-                            'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'bootpresswp' ) . '</span>',
+                            'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'Ratchetwp' ) . '</span>',
                             'after'       => '</div>',
                             'link_before' => '<span>',
                             'link_after'  => '</span>',
@@ -27,7 +27,7 @@ get_header(); ?>
                     ?>
                     <?php endwhile; ?>
                     <?php comments_template(); ?>
-                    <?php bootpresswp_content_nav('nav-below');?>
+                    <?php Ratchetwp_content_nav('nav-below');?>
                 </div>              
                 <div class="col-md-4"><?php get_sidebar('post'); ?></div>
             </div>         
