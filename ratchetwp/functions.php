@@ -6,7 +6,7 @@
  * @subpackage Ratchetwp
  * @since Ratchetwp 0.1
  *
- * Last Revised: Sep 23, 2015
+ * Last Revised: Sep 30, 2015
  */
 
 if ( ! function_exists('ratchetwp_theme_features') ) {
@@ -68,10 +68,11 @@ add_action( 'after_setup_theme', 'ratchetwp_theme_features' );
 }
 
 function custom_Ratchetwp_loader() {
-wp_enqueue_style( 'ratchetwp-style', get_template_directory_uri().'/assets/css/ratchet.min.css', false , '3.3.4', 'all' );
-wp_enqueue_style( 'font-awesome-style', get_template_directory_uri().'/assets/css/font-awesome.css', false , '4.3.0', 'all' );
+wp_enqueue_style( 'ratchetwp-style', get_template_directory_uri().'/assets/css/ratchet.min.css', false , '2.0.2', 'all' );
+wp_enqueue_style( 'font-awesome-style', get_template_directory_uri().'/assets/css/font-awesome.min.css', false , '4.4.0', 'all' );
 wp_enqueue_style( 'ratchetwp-style', get_template_directory_uri().'/assets/css/style.css', false , '1.0', 'all' );
-wp_enqueue_script( 'ratchet-script', get_template_directory_uri() .'/assets/js/ratchet.min.js', array( 'jquery' ), '3.3.4', true );
+wp_enqueue_script( 'ratchet-script', get_template_directory_uri() .'/assets/js/vendor/ratchet.min.js', array( 'jquery' ), '2.0.2', true );
+wp_enqueue_script( 'fingerblast-script', get_template_directory_uri() .'/assets/js/vendor/fingerblast.min.js', array( 'jquery' ), '1.1.1', true );
 wp_enqueue_script( 'ratchetwp-script', get_template_directory_uri() .'/assets/js/script.js', array( 'jquery' ), '1.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'custom_Ratchetwp_loader' );

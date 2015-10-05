@@ -12,7 +12,7 @@ global $childDir;
 $childDir = dirname(get_bloginfo('stylesheet_url'));
 ?><!DOCTYPE html>
 <!-- Ratchetwp -->
-<!-- http://www.anomalous.co.za/Ratchetwp -->
+<!-- http://www.anomalous.co.za/ratchetwp -->
 <html <?php language_attributes(); ?>>
 <head>
     <meta charset="<?php bloginfo('charset'); ?>"/>
@@ -39,6 +39,4 @@ $childDir = dirname(get_bloginfo('stylesheet_url'));
     <p>Why do I have to update my browser?<br> Old browsers (especially Internet Explorer versions 6, 7, and 8) are less stable, and much more vulnerable to viruses, spyware, malware, and other security issues. So security alone is a very good reason to upgrade.<br><br> But there is more: We rely on new Web design technologies. These new languages serve as a foundation for many websites today, and for virtually all new websites and Web apps. But unfortunately, many of these new websites will neither look nor function in the same way in old browsers like IE8.</p>
     <p>Thanks</p>
     <![endif]-->
-    <header class="bar bar-nav">
-      <h1 class="title">Ratchet</h1>
-    </header>
+    

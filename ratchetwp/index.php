@@ -12,18 +12,15 @@
 global $childDir;
 get_header(); ?>
     <?php while ( have_posts() ) : the_post(); ?>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <?php if(function_exists('Ratchetwp_breadcrumbs')) Ratchetwp_breadcrumbs(); ?>
-                    <h1><?php the_title();?></h1>
-                    <p class="meta"><?php echo Ratchetwp_posted_on();?></p>
-                    <?php the_content();?>
-                    <?php the_tags( '<p>Tags: ', ', ', '</p>'); ?>
-                    <?php endwhile;?>
-                    <?php comments_template(); ?>
-                </div>              
-                <div class="col-md-4"><?php get_sidebar('post'); ?></div>
-            </div>         
-        </div>
+    <header class="bar bar-nav">
+        <h1 class="title"><?php the_title();?></h1>
+    </header>
+    <div class="content-padded">
+        <?php if(function_exists('Ratchetwp_breadcrumbs')) Ratchetwp_breadcrumbs(); ?>
+        <p class="meta"><?php echo Ratchetwp_posted_on();?></p>
+        <?php the_content();?>  
+        <?php the_tags( '<p>Tags: ', ', ', '</p>'); ?>
+        <?php endwhile; ?>
+        <?php comments_template(); ?>
+    </div>
 <?php get_footer(); ?>

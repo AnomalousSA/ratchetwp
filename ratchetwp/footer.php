@@ -10,8 +10,7 @@
  * Last Revised: Sep 07, 2015
  */
 global $childDir;
-?>
-        
+?> 
         <?php wp_footer(); ?>
     </body>
 </html>
